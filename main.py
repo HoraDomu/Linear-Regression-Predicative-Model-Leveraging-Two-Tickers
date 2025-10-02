@@ -36,8 +36,8 @@ if df.shape[0] < 2:
 print(df.head())
 
 
-X = df[[ticker2]].values 
-y = df[ticker1].values    
+X = df[[ticker2]].values
+y = df[ticker1].values
 
 
 model = LinearRegression()
@@ -49,7 +49,7 @@ print(f"Slope (β1): {model.coef_[0]:.2f}")
 print(f"R^2 score: {model.score(X, y):.4f}")
 
 
-plt.figure(figsize=(8,6), facecolor = 'black')
+plt.figure(figsize=(8, 6), facecolor="black")
 plt.scatter(X, y, alpha=0.5, label="Data points")
 plt.plot(X, model.predict(X), color="red", label="Regression line")
 plt.xlabel(ticker2)
